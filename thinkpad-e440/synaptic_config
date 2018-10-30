@@ -1,0 +1,17 @@
+#!/bin/sh
+
+synclient TapButton3=2
+synclient ClickFinger3=2
+synclient PalmDetect=1
+synclient PalmMinWidth=4
+synclient PalmMinZ=1
+synclient HorizHysteresis=30
+synclient VertHysteresis=30
+synclient RightButtonAreaTop=0
+synclient RightButtonAreaBottom=3039
+synclient RightButtonAreaLeft=3400
+synclient MiddleButtonAreaRight=3399
+synclient MiddleButtonAreaLeft=2700
+synclient MiddleButtonAreaBottom=3039
+
+

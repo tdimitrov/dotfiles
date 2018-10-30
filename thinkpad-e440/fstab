@@ -1,0 +1,3 @@
+none /var/log tmpfs defaults 0 2
+none /var/tmp tmpfs defaults 0 2
+none /tmp tmpfs defaults 0 2

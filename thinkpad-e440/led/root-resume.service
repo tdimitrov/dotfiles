@@ -1,0 +1,10 @@
+[Unit]
+Description=Local system resume actions
+After=suspend.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c "echo '0 on' >  /proc/acpi/ibm/led"
+
+[Install]
+WantedBy=suspend.target
