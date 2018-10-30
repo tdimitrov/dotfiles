@@ -6,3 +6,8 @@
 | sysctls | goes in /etc/sysctl | lowers the swappiness parameter |
 
 **Install tlp**
+
+Bash alias to fix scroll gesture:
+
+alias fix_touchpad="sudo modprobe -r psmouse && sudo modprobe psmouse"
+
