@@ -133,5 +133,6 @@ Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'kamailio/vim-kamailio-syntax', {'for': 'kamailio'}
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'gcmt/taboo.vim'
-Plug 'ludovicchabant/vim-gutentags', {'branch': 'vim7'}
+Plug 'ludovicchabant/vim-gutentags', {'branch': 'vim7', 'for': ['c', 'cpp']}
+
 call plug#end()
