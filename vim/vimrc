@@ -64,6 +64,10 @@ endif
 let mapleader = ","                         
 map <Leader>e :tabe %:h<CR>
 
+"enable autocomplete
+set omnifunc=syntaxcomplete#Complete
+inoremap <leader>, <C-x><C-o>
+
 "Quickly edit/reload vimrc
 nmap <silent> <leader>ev :tabe $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
@@ -129,4 +133,5 @@ Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'kamailio/vim-kamailio-syntax', {'for': 'kamailio'}
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'gcmt/taboo.vim'
+Plug 'ludovicchabant/vim-gutentags', {'branch': 'vim7'}
 call plug#end()
