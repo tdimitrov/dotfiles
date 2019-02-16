@@ -126,10 +126,9 @@ let g:go_highlight_extra_types = 1
 
 "vim plug
 call plug#begin('~/.vim/plugged')
-Plug 'davidhalter/jedi-vim', {'for': 'python'}
-Plug 'kamailio/vim-kamailio-syntax', {'for': 'kamailio'}
-Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'davidhalter/jedi-vim'
+Plug 'kamailio/vim-kamailio-syntax'
+Plug 'fatih/vim-go'
 Plug 'gcmt/taboo.vim'
-Plug 'ludovicchabant/vim-gutentags', {'branch': 'vim7', 'for': ['c', 'cpp']}
-
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
