@@ -50,7 +50,8 @@ set tags+=tags;/
 "gvim enchancements
 if has('gui_running')
     set guioptions-=T                        "remove toolbar
-    set guifont=Monospace\ 10
+    set guifont=Ubuntu\ Mono\ 12
+    "set guifont=Monospace\ 10
     set lines=999 columns=999                "start maximized
 endif
 
