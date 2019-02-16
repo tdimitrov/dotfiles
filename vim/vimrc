@@ -1,0 +1,132 @@
+"
+" General settings
+"
+
+" identation 
+set smartindent
+set tabstop=4		        "tab size
+set shiftwidth=4            "control how many columns text is indented with the reindent operations (<< and >>)
+set softtabstop=4           "control how many columns vim uses when you hit Tab in insert mode
+set number                  "show line numbers
+set expandtab
+filetype plugin indent on
+
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd BufNewFile,BufRead Vagrantfile setlocal filetype=ruby shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType rst setlocal spell spelllang=en_gb
+
+"hide buffer instead closing it - https://medium.com/usevim/vim-101-set-hidden-f78800142855 
+set hidden
+
+"highlighting
+syntax enable               
+colorscheme desert
+
+"current line highlighting in normal mode
+hi CursorLine term=bold cterm=bold guibg=Grey40
+set cul
+autocmd InsertEnter,InsertLeave * set cul!
+
+"custom status line
+set statusline=%F%m%r\ %=[pos=%l,%v][%p%%]
+set laststatus=2
+
+"hl search
+set hlsearch
+set incsearch
+
+"easier to navigate auto-complete meuns
+set wildmode=longest,list,full		"longest,list is 'bash style' full will cycle through possible results
+set wildmenu			            "when using autocomplete, show results in pseudo-window
+
+"set path
+set path+=**,
+set tags+=tags;/
+
+"set cwd to file's cwd
+"set autochdir
+
+
+"gvim enchancements
+if has('gui_running')
+    set guioptions-=T                        "remove toolbar
+    set guifont=Monospace\ 10
+    set lines=999 columns=999                "start maximized
+endif
+
+
+
+"
+" Custom shortcuts
+"
+
+" set leader
+let mapleader = ","                         
+map <Leader>e :tabe %:h<CR>
+
+"Quickly edit/reload vimrc
+nmap <silent> <leader>ev :tabe $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+"save file with sudo rights
+cmap w!! w !sudo tee % >/dev/null
+
+"clear HL search
+nmap <silent> <Leader>/ :nohlsearch<CR>
+
+"clipboard shortcuts
+map <Leader>c "+y
+map <Leader>v "+gP
+map <Leader>x "+yx
+
+"split shortcuts
+map <Leader>\ :vsplit<CR><C-w>w
+map <Leader>= :split<CR><C-w>w
+
+"generate ctags
+command! GenerateCtags !ctags -R . && echo "DONE"
+
+"go to declaration in new vsplit and center screen
+map <Leader>]\ :vsplit<CR><C-w>l<C-]>zz
+"go to declaration in new split and center screen
+map <Leader>]= :split<CR><C-w>l<C-]>zz
+
+"goto tab
+noremap <Leader>1 1gt
+noremap <Leader>2 2gt
+noremap <Leader>3 3gt
+noremap <Leader>4 4gt
+noremap <Leader>5 5gt
+noremap <Leader>6 6gt
+noremap <Leader>7 7gt
+noremap <Leader>8 8gt
+noremap <Leader>9 9gt
+
+" (evil)
+"map <up> <nop>
+"map <down> <nop>
+"map <left> <nop>
+"map <right> <nop>
+
+"jedi-vim
+let g:jedi#use_tabs_not_buffers = 1
+
+"taboo
+let g:taboo_tab_format = " [%N] %f %m "
+let g:taboo_renamed_tab_format = " [%N] %l %m "
+
+"vim-go
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+
+"vim plug
+call plug#begin('~/.vim/plugged')
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
+Plug 'kamailio/vim-kamailio-syntax', {'for': 'kamailio'}
+Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'gcmt/taboo.vim'
+call plug#end()
