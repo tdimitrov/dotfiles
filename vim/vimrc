@@ -41,7 +41,6 @@ set wildmenu			            "when using autocomplete, show results in pseudo-wind
 
 "set path
 set path+=**,
-set tags+=tags;/
 
 "set cwd to file's cwd
 "set autochdir
@@ -87,9 +86,6 @@ map <Leader>x "+yx
 "split shortcuts
 map <Leader>\ :vsplit<CR><C-w>w
 map <Leader>= :split<CR><C-w>w
-
-"generate ctags
-command! GenerateCtags !ctags -R . && echo "DONE"
 
 "go to declaration in new vsplit and center screen
 map <Leader>]\ :vsplit<CR><C-w>l<C-]>zz
