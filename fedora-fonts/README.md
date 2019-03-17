@@ -32,7 +32,10 @@ sudo dnf install freetype-freeworld
 Unfortunately, there is no GSettings key for it. You have to create a hidden .Xresource file with the Xft.lcdfilter: lcddefault setting in your home directory. Run:
 
 ```
+# For XOrg (depricated
 echo "Xft.lcdfilter: lcddefault" > ~/.Xresources
+# For Wayland
+sudo ln -s /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/
 ```
 
 4. Logoff and logon again, and you will see the changes. Use xrdb -query to display your settings.
