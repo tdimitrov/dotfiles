@@ -1,9 +1,7 @@
-desktop-icons@csoriano
 Hide_Activities@shay.shayel.org
 mediaplayer@patapon.info
 no-title-bar@franglais125.gmail.com
 openweather-extension@jenslody.de
 remove-dropdown-arrows@mpdeimos.com
-scroll-workspaces@gfxmonk.net
 status-area-horizontal-spacing@mathematical.coffee.gmail.com
 topicons-redux@pop-planet.info
