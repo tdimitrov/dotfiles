@@ -11,3 +11,4 @@ Bash alias to fix scroll gesture:
 
 alias fix_touchpad="sudo modprobe -r psmouse && sudo modprobe psmouse"
 
+Install libimobiledevice-utils for iOS devices access.
