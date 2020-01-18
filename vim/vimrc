@@ -1,8 +1,8 @@
 "
-" General settings
+"General settings
 "
 
-" identation 
+"default identation 
 set smartindent
 set tabstop=4		        "tab size
 set shiftwidth=4            "control how many columns text is indented with the reindent operations (<< and >>)
@@ -11,7 +11,10 @@ set number                  "show line numbers
 set expandtab
 filetype plugin indent on
 
+"per filetype settings
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType markdown setlocal spell
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd BufNewFile,BufRead Vagrantfile setlocal filetype=ruby shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType rst setlocal spell spelllang=en_gb
 
@@ -45,6 +48,8 @@ set path+=**,
 "set cwd to file's cwd
 "set autochdir
 
+"no folds
+set nofoldenable
 
 "gvim enchancements
 if has('gui_running')
@@ -60,7 +65,7 @@ endif
 " Custom shortcuts
 "
 
-" set leader
+"set leader
 let mapleader = ","                         
 map <Leader>e :tabe %:h<CR>
 
