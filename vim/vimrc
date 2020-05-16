@@ -135,5 +135,4 @@ Plug 'davidhalter/jedi-vim'
 Plug 'kamailio/vim-kamailio-syntax'
 Plug 'fatih/vim-go'
 Plug 'gcmt/taboo.vim'
-Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
