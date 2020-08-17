@@ -14,6 +14,7 @@ filetype plugin indent on
 "per filetype settings
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd BufNewFile,BufRead Vagrantfile setlocal filetype=ruby shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType rst setlocal spell spelllang=en_gb
