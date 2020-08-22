@@ -6,6 +6,7 @@
 | sysctls | goes in /etc/sysctl | lowers the swappiness parameter |
 
 **Install tlp**
+sudo apt install tlp tlp-rdw tp-smapi-dkms acpi-call-dkms
 
 Bash alias to fix scroll gesture:
 
