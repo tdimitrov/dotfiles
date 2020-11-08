@@ -28,6 +28,7 @@ colorscheme desert
 
 "current line highlighting in normal mode
 hi CursorLine cterm=NONE ctermbg=235 guibg=Grey40  "235 -> Grey 15
+hi CursorLineNr cterm=BOLD
 set cul
 autocmd InsertEnter,InsertLeave * set cul!
 
