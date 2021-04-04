@@ -87,7 +87,7 @@ nmap <silent> <Leader>/ :nohlsearch<CR>
 
 "clipboard shortcuts
 map <Leader>c "+y
-map <Leader>v "+gP
+map <Leader>v "+gp
 map <Leader>x "+yx
 
 "split shortcuts
