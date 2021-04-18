@@ -131,10 +131,15 @@ let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
 
+"NERDTree
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
 "vim plug
 call plug#begin('~/.vim/plugged')
 Plug 'davidhalter/jedi-vim'
 Plug 'kamailio/vim-kamailio-syntax'
 Plug 'fatih/vim-go'
 Plug 'gcmt/taboo.vim'
+Plug 'preservim/nerdtree'
 call plug#end()
