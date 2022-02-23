@@ -1,0 +1,9 @@
+[Unit]
+Description=Enable USB wakeup
+
+[Service]
+ExecStart=/bin/bash -c "echo enabled > /sys/bus/usb/devices/3-2/power/wakeup"
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target

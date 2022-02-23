@@ -13,3 +13,15 @@ Bash alias to fix scroll gesture:
 alias fix_touchpad="sudo modprobe -r psmouse && sudo modprobe psmouse"
 
 Install libimobiledevice-utils for iOS devices access.
+
+Enable USB wakeup:
+* Run `grep . /sys/bus/usb/devices/*/product` to figure out on which port the keyboard is.
+* Modify and copy /etc/systemd/system/usb-wakeup.service
+* sudo systemctl enable usb-wakeup.service 
+* sudo systemctl start usb-wakeup.service  
+
+Keychron:
+* /etc/systemd/system/keychron.service
+* sudo systemctl enable keychron.service 
+* sudo systemctl start keychron.service  
+
